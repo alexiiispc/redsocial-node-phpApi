@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link rel="stylesheet" href="../content/css/login.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+</head>
+<body>
+
+    <div class="content-login">
+        <!--<img src="alexisweb-log.png">-->
+
+
+        <div class="form-login">
+            <span class="title-login">Inicie sesión para continuar</span>
+            
+            <input class="txtEmailLogin" type="email" placeholder="Correo electrónico">
+
+            <input class="txtPasswordLogin" type="password" placeholder="Contraseña">
+
+            <span class="alertLogin">Complete todos los campos</span>
+            <div class="preloader"></div>
+            <button class="btnLogin" id="btnLogin">Iniciar Sesión</button>
+            <span>¿No tienes cuenta? <a class="registroLink" href="void:Javascript()" id="eRegistro">Registro</a></span>
+        </div>
+        
+        <div class="form-register">
+            <span class="title-register">Complete todos los datos para <br> registrarse</span>
+
+            
+
+            <input class="txtNombreRegister" type="text" placeholder="Nombre">
+
+            <input class="txtApellidoRegister" type="text" placeholder="Apellido">
+
+            <!--<input class="txtCelRegister" type="number" placeholder="Número celular" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="9">-->
+
+            <input class="txtEmailRegister" type="email" placeholder="Correo electrónico">
+
+            <input class="txtContraRegister" type="password" placeholder="Contraseña">
+            
+            <span class="alertRegister">Complete todos los campos</span>
+
+            <button class="btnRegister" id="btnRegister">Registrarme</button>
+
+            <span>Tengo cuenta.  <a class="loginLink" href="void:Javascript()" id="eLogin">Iniciar Sesión</a></span>
+        </div>
+    
+
+
+
+
+    </div>
+    
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../controller/config.js"></script>
+    <script src="../content/js/login.js"></script>
+    <script src="../controller/auth.js"></script>
+    <script src="../content/js/menu.js"></script>
+</body>
+</html>

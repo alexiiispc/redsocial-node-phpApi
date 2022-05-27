@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="../../content/css/c.css" />
+    <link rel="stylesheet" href="../../content/css/stickers.css" />
+    <link rel="stylesheet" href="../../content/css/alertmessage.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
+    />
+  </head>
+  <body>
+    <!--CONTENEDOR CHAT INDIVIDUAL-->
+    <div class="chat-wrap">
+        <div class="header">
+          <a href="/chat" style="color: black; font-size: 20px"
+            ><i class="bi bi-chevron-compact-left"></i></i
+          ></a>
+          <img src="" alt="" id="img-chat" class="img-perfil-user"/>
+          <div class="detalles">
+            <span id="nombre-to-name">---</span>
+            <!--<p>---</p>-->
+          </div>
+        </div>
+
+        <div class="chat-box" id="chat-box"></div>
+
+        <div class="text-area">
+          <input type="text" name="" value="UNIQID" hidden />
+          <button type="button" id="btn-archive">
+            <i class="bi bi-paperclip"></i>
+          </button>
+          <input
+            type="text"
+            class="mensaje"
+            id="message-area"
+            placeholder="Aa"
+          />
+          <!--<textarea class="mensaje" rows="1"  id="message-area"></textarea>-->
+          <button type="button" class="btn-stycker">
+            <i class="bi bi-emoji-smile"></i>
+          </button>
+          <button type="button" id="send-message">
+            <i class="bi bi-send"></i>
+          </button>
+        </div>
+      </div>
+
+      <!--CONTENT STICKERS -->
+    <div class="overlay-stickers">
+      <div class="content-stickers">
+        <div class="header-stickers">
+          <span></span>
+          <button id="close-overlay-sticker"><i class="bi bi-x-lg"></i></button>
+        </div>
+        <form enctype="multipart/form-data" id="frmSticker" method="post">
+          <input
+            type="file"
+            name="file-sticker"
+            id="file-sticker"
+            accept="image/*"
+            onchange="selectSticker(event)"
+            hidden
+          />
+
+          <input
+            type="text"
+            id="token_user_sticker"
+            name="token_user"
+            value=""
+            hidden
+          />
+        </form>
+
+        <div class="create-sticker">
+          <img
+            src="../content/images/plus.jpg"
+            alt=""
+            id="select-img-create"
+            onclick="selectStickerBtn()"
+          />
+          <!--<button id="select-img-create"><i class="bi bi-plus-lg"></i></button>-->
+          <button id="save-sticker">GUARDAR</button>
+        </div>
+
+        <div class="styckers">
+          
+        </div>
+      </div>
+    </div>
+
+    <!--FIN STICKERS-->
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="../controller/config.js"></script>
+    <script src="../content/js/c.js"></script>
+    <script src="../controller/c.js"></script>
+    <script src="../controller/styckers.js"></script>
+  </body>
+</html>
